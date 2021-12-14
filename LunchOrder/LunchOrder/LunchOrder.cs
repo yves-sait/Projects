@@ -2,7 +2,7 @@
 
 /*
 * CPRG 200 Lab Assignment 1
-* Author: 
+* Author:
 * Date: December 2022
 * C# Application that accepts lunch order from user.
 * Calculates the order subtotal and total with tax 5% added.
@@ -141,20 +141,14 @@ namespace LunchOrder
             {
 
                 if (rdbMainMenu.Name == "rdbHam") // if the sender is the Hamburger radiobutton
-                {
                     SetHamAddOn(); // set and display the Hamburger addon checkboxes
 
-                }
                 else if (rdbMainMenu.Name == "rdbPizza") // if the sender is the Pizza radiobutton
-                {
                     SetPizzaAddOn(); // set and display the Pizza addon checkboxes
 
-                }
                 else if (rdbMainMenu.Name == "rdbSalad") // if the sender is the Salad radiobutton
-                {
                     SetSaladAddOn();  // set and display the Salad addon checkboxes
 
-                }
             }
 
 
@@ -175,19 +169,13 @@ namespace LunchOrder
             int addOnCount = 0; // declare and initialize the count variable
 
             if (chkbAdd1.Checked) // if checkbox1 is checked
-            {
                 addOnCount++; // Add 1 to the current count
-            }
 
             if (chkbAdd2.Checked)  // if checkbox2 is checked
-            {
                 addOnCount++; // Add 1 to the current count
-            }
 
             if (chkbAdd3.Checked) // if checkbox3 is checked
-            {
                 addOnCount++; // Add 1 to the current count
-            }
 
             return addOnCount; //return the total count to the calling code
         }
@@ -202,7 +190,7 @@ namespace LunchOrder
         private void GetOrderFee(decimal OrderSubTotal, out decimal OrderTotal, out decimal OrderTax)
         {
 
-            OrderTax = TAX_RATE * OrderSubTotal; // Calculate the order tax
+            OrderTax = TAX_RATE * OrderSubTotal; // Calculate the order tax.
             OrderTotal = OrderTax + OrderSubTotal; // calculate the total fee.
 
 
@@ -258,14 +246,16 @@ namespace LunchOrder
             // disable the mainmenu and addon choices
             // this is to avoid selection  after the order total values are already computed
             // User will need to click on reset to select new order
-            rdbHam.Enabled = false;
-            rdbPizza.Enabled = false;
-            rdbSalad.Enabled = false;
-            chkbAdd1.Enabled = false;
-            chkbAdd2.Enabled = false;
-            chkbAdd3.Enabled = false;
+            grpbMain.Enabled = false;
+            grpbAddOn.Enabled = false;
+
+            // focus on reset button to get ready for next order
+            BtnReset.Focus();
+
 
         }
+
+
 
         /*
          * 
@@ -290,16 +280,13 @@ namespace LunchOrder
             rdbHam.Checked = true; //set Hamburger as default selected Main Menu
             ClearAddOnCheck(); // Clear all add-on checkboxes.
 
-            //Clear all calculation results
-            ClearOrderTotalValues();
+            ClearOrderTotalValues(); //Clear all calculation results
 
             // re-enable back the choices for new order
-            rdbHam.Enabled = true;
-            rdbPizza.Enabled = true;
-            rdbSalad.Enabled = true;
-            chkbAdd1.Enabled = true;
-            chkbAdd2.Enabled = true;
-            chkbAdd3.Enabled = true;
+            grpbMain.Enabled = true;
+            grpbAddOn.Enabled = true;
+
+
         }
 
 

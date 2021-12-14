@@ -30,7 +30,7 @@ namespace LunchOrder
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LunchOrder));
-            this.grbMain = new System.Windows.Forms.GroupBox();
+            this.grpbMain = new System.Windows.Forms.GroupBox();
             this.rdbSalad = new System.Windows.Forms.RadioButton();
             this.rdbPizza = new System.Windows.Forms.RadioButton();
             this.rdbHam = new System.Windows.Forms.RadioButton();
@@ -49,25 +49,25 @@ namespace LunchOrder
             this.chkbAdd3 = new System.Windows.Forms.CheckBox();
             this.chkbAdd2 = new System.Windows.Forms.CheckBox();
             this.chkbAdd1 = new System.Windows.Forms.CheckBox();
-            this.grbMain.SuspendLayout();
+            this.grpbMain.SuspendLayout();
             this.grpbOrderTotal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMenu)).BeginInit();
             this.grpbAddOn.SuspendLayout();
             this.SuspendLayout();
             // 
-            // grbMain
+            // grpbMain
             // 
-            this.grbMain.Controls.Add(this.rdbSalad);
-            this.grbMain.Controls.Add(this.rdbPizza);
-            this.grbMain.Controls.Add(this.rdbHam);
-            this.grbMain.Location = new System.Drawing.Point(39, 17);
-            this.grbMain.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.grbMain.Name = "grbMain";
-            this.grbMain.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.grbMain.Size = new System.Drawing.Size(334, 164);
-            this.grbMain.TabIndex = 0;
-            this.grbMain.TabStop = false;
-            this.grbMain.Text = "Main Menu";
+            this.grpbMain.Controls.Add(this.rdbSalad);
+            this.grpbMain.Controls.Add(this.rdbPizza);
+            this.grpbMain.Controls.Add(this.rdbHam);
+            this.grpbMain.Location = new System.Drawing.Point(39, 17);
+            this.grpbMain.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.grpbMain.Name = "grpbMain";
+            this.grpbMain.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.grpbMain.Size = new System.Drawing.Size(334, 164);
+            this.grpbMain.TabIndex = 0;
+            this.grpbMain.TabStop = false;
+            this.grpbMain.Text = "Main Menu";
             // 
             // rdbSalad
             // 
@@ -287,14 +287,14 @@ namespace LunchOrder
             this.Controls.Add(this.BtnReset);
             this.Controls.Add(this.BtnOrder);
             this.Controls.Add(this.grpbOrderTotal);
-            this.Controls.Add(this.grbMain);
+            this.Controls.Add(this.grpbMain);
             this.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "LunchOrder";
             this.Text = "Lunch Order";
-            this.grbMain.ResumeLayout(false);
-            this.grbMain.PerformLayout();
+            this.grpbMain.ResumeLayout(false);
+            this.grpbMain.PerformLayout();
             this.grpbOrderTotal.ResumeLayout(false);
             this.grpbOrderTotal.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMenu)).EndInit();
@@ -306,7 +306,7 @@ namespace LunchOrder
 
         #endregion
 
-        private System.Windows.Forms.GroupBox grbMain;
+        private System.Windows.Forms.GroupBox grpbMain;
         private System.Windows.Forms.RadioButton rdbSalad;
         private System.Windows.Forms.RadioButton rdbPizza;
         private System.Windows.Forms.RadioButton rdbHam;
